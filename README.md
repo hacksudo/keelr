@@ -20,13 +20,15 @@ With integrated **Role-Based Access Control (RBAC)**, administrators can manage 
 - **Automated Image Scanning:** Scan local images, Docker Hub, AWS ECR, GCP GCR, and private registries.
 - **Layer-by-Layer Vulnerability Detection:** Uncover OS package flaws (Debian, Alpine, RHEL, Ubuntu) and runtime dependencies.
 - **Automated Triggers:** Schedule scans on a daily/weekly basis or trigger scans via webhooks and CI/CD pipelines.
-  <img width="2930" height="1468" alt="image" src="https://github.com/user-attachments/assets/680d0e3d-f6dc-4cab-a2a4-9ec347dc4343" />
+  
+  <img width="2500" height="1468" alt="image" src="https://github.com/user-attachments/assets/680d0e3d-f6dc-4cab-a2a4-9ec347dc4343" />
 
 
 ### 📜 2. SBOM Generation & Vulnerability Auditing
 - **Automated SBOM Creation:** Generate Software Bills of Materials in **SPDX** and **CycloneDX** standards.
 - **Deep Dependency Tracking:** Identify hidden transitive dependencies and match them against known CVE databases (NVD, GitHub Advisories).
-![Uploading image.png…]()
+- 
+<img width="2500" height="1414" alt="image" src="https://github.com/user-attachments/assets/a647840a-423c-48a5-b38d-81eba444e7d7" />
 
 
 ### 💻 3. Source Code Scanner (SAST & Secret Detection)
@@ -93,25 +95,29 @@ Export detailed, executive, and technical audit reports with a single click:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/securescan.git
-cd securescan
+git clone https://github.com/hacksudo/keelr.git
+cd keelr
 ```
 
 ### 2. Configure Environment Variables
 ```bash
-cp .env.example .env
+unzip keelr_scanner_login_v1.0.6.zip
+cd keelr_scanner_login_v1.0.6
+bash install.sh
 ```
-
+or 
 ### 3. Launch the Platform
 ```bash
-docker compose up -d
+unzip keelr_scanner_login_v1.0.6.zip
+cd keelr_scanner_login_v1.0.6
+docker load keelr-scanner.tar
 ```
 
 ### 4. Access the Dashboard
-- **Web UI:** `http://localhost:3000`
+- **Web UI:** `http://localhost:3001`
 - **Default Admin Login:**
-  - **Username:** `admin@example.com`
-  - **Password:** `admin123` *(Please change upon first login)*
+  - **Username:** `admin`
+  - **Password:** `Admin@123` *(Please change upon first login)*
 
 ---
 
@@ -129,42 +135,6 @@ docker compose up -d
 
 ---
 
-## 📄 API & CLI Usage
-
-### Trigger a Container Scan via cURL:
-```bash
-curl -X POST http://localhost:8000/api/v1/scan/docker \
-  -H "Authorization: Bearer <YOUR_TOKEN>" \
-  -H "Content-Type: application/json" \
-  -d '{"image_name": "nginx:latest", "report_format": "pdf"}'
-```
-
-### Download Scan Report:
-```bash
-curl -X GET http://localhost:8000/api/v1/reports/<SCAN_ID>/download?format=pdf \
-  -H "Authorization: Bearer <YOUR_TOKEN>" \
-  --output report.pdf
-```
-
----
-
-## 🛑 Troubleshooting
-
-### GitHub Image Upload Error: "Yowza, that’s a big file."
-If you encounter this error while uploading screenshots or architecture diagrams to this repository via the GitHub web interface, it means your image exceeds GitHub's 25MB web upload limit.
-
-**How to fix it:**
-1. **Compress the Image (Recommended):** Use tools like [TinyPNG](https://tinypng.com/) or [Squoosh](https://squoosh.app/) to drastically reduce the file size.
-2. **Convert the Format:** Change high-res raw files or PNGs to JPG or WebP.
-3. **Push via Git CLI:** The command line allows uploading files up to 100MB.
-   ```bash
-   git add your-image-name.jpg
-   git commit -m "Add large architecture diagram"
-   git push origin main
-   ```
-4. **Host Externally:** Upload the image to an external host (Imgur, AWS S3) and embed it using markdown: `![Description](https://your-link.com/image.jpg)`
-
----
 
 ## 🛡️ License
 
