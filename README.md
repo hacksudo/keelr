@@ -121,6 +121,37 @@ docker load keelr-scanner.tar
 
 ---
 
+## Docker Source Code Scan
+
+Stop and remove the existing scanner container, then recreate it with the DVWA source code mounted as read-only:
+
+docker stop keelr-scanner-app
+docker rm keelr-scanner-app
+
+docker run -d \
+  --name keelr-scanner-app \
+  -p 5001:5001 \
+  -v "/Users/vishalwaghmare/Downloads/DVWA-master:/scan/DVWA-master:ro" \
+  -e SOURCE_CODE_PATH=/scan/DVWA-master \
+  keelr-scanner:latest
+
+Verify the source code is mounted:
+
+docker exec -it keelr-scanner-app ls -la /scan/DVWA-master
+
+Run the Trivy source-code scan:
+
+docker exec -it keelr-scanner-app \
+  trivy fs /scan/DVWA-master
+
+To scan only vulnerabilities and misconfigurations:
+
+docker exec -it keelr-scanner-app \
+  trivy fs --scanners vuln,misconfig /scan/DVWA-master
+
+The host source code directory `/Users/vishalwaghmare/Downloads/DVWA-master` is mounted inside the container at `/scan/DVWA-master` as read-only (`:ro`).
+
+
 ## 🛠️ User Roles & Permissions
 
 | Feature / Action | Admin | Standard User |
