@@ -1,4 +1,4 @@
-# 🛡️ SecureScan
+# 🛡️ Keelr Docker Image Vulnerability SecureScanner
 > **All-in-One Centralized Container & Source Code Vulnerability Scanner with SBOM, Multi-Format Reporting, and Multi-User RBAC Management.**
 
 ---
