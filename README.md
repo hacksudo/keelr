@@ -8,7 +8,8 @@
 **KeelrSecureScan** is a centralized, self-hosted security platform engineered to simplify vulnerability management for modern DevSecOps teams. It allows organizations, administrators, and developers to automatically scan Docker container images and source code repositories, generate and audit Software Bills of Materials (SBOM), and produce exportable security reports in multiple formats.
 
 With integrated **Role-Based Access Control (RBAC)**, administrators can manage user accounts, monitor scanning activity across teams, and enforce security policies from a single unified dashboard.
-<img width="2856" height="1464" alt="image" src="https://github.com/user-attachments/assets/2e9239fd-50c2-43c3-be33-0dadfb680f89" />
+
+<img width="2500" height="1464" alt="image" src="https://github.com/user-attachments/assets/2e9239fd-50c2-43c3-be33-0dadfb680f89" />
 
 
 ---
