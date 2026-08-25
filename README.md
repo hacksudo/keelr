@@ -5,9 +5,11 @@
 
 ## 📌 Overview
 
-**SecureScan** is a centralized, self-hosted security platform engineered to simplify vulnerability management for modern DevSecOps teams. It allows organizations, administrators, and developers to automatically scan Docker container images and source code repositories, generate and audit Software Bills of Materials (SBOM), and produce exportable security reports in multiple formats.
+**KeelrSecureScan** is a centralized, self-hosted security platform engineered to simplify vulnerability management for modern DevSecOps teams. It allows organizations, administrators, and developers to automatically scan Docker container images and source code repositories, generate and audit Software Bills of Materials (SBOM), and produce exportable security reports in multiple formats.
 
 With integrated **Role-Based Access Control (RBAC)**, administrators can manage user accounts, monitor scanning activity across teams, and enforce security policies from a single unified dashboard.
+<img width="2856" height="1464" alt="image" src="https://github.com/user-attachments/assets/2e9239fd-50c2-43c3-be33-0dadfb680f89" />
+
 
 ---
 
@@ -17,10 +19,14 @@ With integrated **Role-Based Access Control (RBAC)**, administrators can manage 
 - **Automated Image Scanning:** Scan local images, Docker Hub, AWS ECR, GCP GCR, and private registries.
 - **Layer-by-Layer Vulnerability Detection:** Uncover OS package flaws (Debian, Alpine, RHEL, Ubuntu) and runtime dependencies.
 - **Automated Triggers:** Schedule scans on a daily/weekly basis or trigger scans via webhooks and CI/CD pipelines.
+  <img width="2930" height="1468" alt="image" src="https://github.com/user-attachments/assets/680d0e3d-f6dc-4cab-a2a4-9ec347dc4343" />
+
 
 ### 📜 2. SBOM Generation & Vulnerability Auditing
 - **Automated SBOM Creation:** Generate Software Bills of Materials in **SPDX** and **CycloneDX** standards.
 - **Deep Dependency Tracking:** Identify hidden transitive dependencies and match them against known CVE databases (NVD, GitHub Advisories).
+![Uploading image.png…]()
+
 
 ### 💻 3. Source Code Scanner (SAST & Secret Detection)
 - **Static Code Analysis:** Scan source code repositories (Git, ZIP upload, local paths) for security vulnerabilities, code smells, and unsafe dependencies.
