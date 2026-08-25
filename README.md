@@ -95,8 +95,8 @@ Export detailed, executive, and technical audit reports with a single click:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/hacksudo/keelr.git
-cd keelr
+Download Image file from release section
+
 ```
 
 ### 2. Configure Environment Variables
