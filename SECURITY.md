@@ -11,13 +11,12 @@ Security updates are provided for the following versions of the project. Please 
 | 1.0.6   | :white_check_mark: |
 | < 1.0   | :x:                |
 
-*(Update this table as you release new major or minor versions).*
 
 ## Reporting a Vulnerability
 
 **Please do not report security vulnerabilities through public GitHub issues.** 
 
-If you discover a security vulnerability within SecureScan, please send an email to **[your-email@example.com]**.
+If you discover a security vulnerability within SecureScan, please send an email to **vishal@hacksudo.com]**.
 
 When reporting a vulnerability, please include the following information:
 * A description of the vulnerability and its impact.
