@@ -8,7 +8,7 @@ Security updates are provided for the following versions of the project. Please 
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
+| 1.0.6   | :white_check_mark: |
 | < 1.0   | :x:                |
 
 *(Update this table as you release new major or minor versions).*
